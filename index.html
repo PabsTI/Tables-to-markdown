@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table to Markdown Converter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      #paste-area {
+        width: 100%;
+        min-height: 150px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow: auto;
+        resize: both;
+        background-color: #f9f9f9;
+      }
+      #output {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-top: 20px;
+        white-space: pre-wrap;
+        overflow-x: auto;
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      #copy-button {
+        display: none;
+        margin-top: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Convert Table to Markdown</h1>
+    <p>Paste your table below (directly from Excel or Google Sheets):</p>
+    <div contenteditable="true" id="paste-area"></div>
+    <button onclick="convertTableToMarkdown()">Convert to Markdown</button>
+
+    <h2>Markdown Output</h2>
+    <pre id="output"></pre>
+    <button id="copy-button" onclick="copyToClipboard()">Copy Markdown</button>
+
+    <!-- Link the JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
